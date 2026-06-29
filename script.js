@@ -4,6 +4,8 @@
 const cityName = "New York"
 const url = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(cityName)}&count=5&language=en&format=json`;
 
+const cityInput = document.getElementById("city-input")
+const searchBtn = document.getElementById("search-btn")
 async function geoCode() {
     try {
         const res = await fetch(url)
