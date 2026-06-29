@@ -1,5 +1,6 @@
 # Weather App
-[Live Demo](https://abedoulaye.github.io/weather-)
+[Live Demo]
+(https://abedoulaye.github.io/weather)
 
 A simple weather application that fetches real-time weather data using the Open-Meteo API.
 
