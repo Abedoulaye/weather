@@ -41,7 +41,10 @@ async function geoCode(cityName) {
 
 async function getWeather(cityName) {
     const output = await geoCode(cityName)
-    if (!output) return
+    if (!output){
+        alert("City not found, please try again");
+        return
+    }
     
     const bestMatch = output.cityData
     const weatherUrl = output.weatherUrl
@@ -71,7 +74,7 @@ async function getWeather(cityName) {
     }
     catch(error) {
         console.log("Something went wrong getting weather", error)
-        alert("Something went wrong, please try again")
+        
     }
 }
 
