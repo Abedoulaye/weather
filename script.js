@@ -52,7 +52,7 @@ async function getWeather(cityName) {
         const data = await res.json()
         console.log("Weather data:", data)
         
-        city.textContent = bestMatch.name
+        city.textContent = `${bestMatch.name}, ${bestMatch.country}`
         date.textContent = new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })
         temperature.textContent = Math.round(data.current.temperature_2m) + "°C"
         feelsLike.textContent = Math.round(data.current.apparent_temperature) + "°C"
@@ -71,6 +71,7 @@ async function getWeather(cityName) {
     }
     catch(error) {
         console.log("Something went wrong getting weather", error)
+        alert("Something went wrong, please try again")
     }
 }
 
